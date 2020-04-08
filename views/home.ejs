@@ -1,0 +1,13 @@
+<% include ./partials/header_forside %>
+        <section class="forsidemain">
+                <form action="/search/products" method="get" id="search_form" class="wrapper">
+                        <fieldset>
+                                <legend>Find din nye bolig</legend>
+                            <input style="height: 50px;" type="text" name="name" id="name" placeholder="postnr., by, vej, sagsnr">
+                            <br>
+                            <button style="width: 3%;" type="submit"><img src="/img/icon/search.png" alt=""></button>
+                        </fieldset>
+                    </form>
+        </section>
+<% include ./partials/sidemenu %>
+<% include ./partials/footer_forside %>

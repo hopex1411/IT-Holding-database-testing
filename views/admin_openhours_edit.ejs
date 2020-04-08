@@ -1,0 +1,16 @@
+<% include ./partials/admin_header %>
+        
+    <section class="admin_content">
+        <form class="admin_form_create_update" method="POST">
+            <legend>Rediger Åbningstider</legend>
+            
+            <fieldset>
+                <label for="time"><%= result.day %></label>
+                <input type="text" name="time" id="time" value="<%= result.time %>" required>
+            </fieldset>
+    
+            <button type="submit">Rediger</button>
+        </form>
+    </section>
+
+<% include ./partials/admin_footer %>

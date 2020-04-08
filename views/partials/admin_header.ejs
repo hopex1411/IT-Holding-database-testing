@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Panel | Stuff</title>
+    <link rel="stylesheet" href="/css/admin_panel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5eb9cd2325.js"></script>
+</head>
+<body>
+
+    
+
+    <main class="admin_main">
+        <i class="fas fa-bars" id="slider_menu"></i>
+        
+        <!--COMPUTER ASIDE-->
+        <aside class="admin_aside_navigation admin_aside_pc ">
+            <h1><a href="/">Boligstjernen</a></h1>
+            <nav class="admin_nav_pc">
+                <ul>
+                    <li><i class="fas fa-home"></i> <a href="/admin">Admin Panel</a></li>
+                    <li><i class="fas fa-shopping-cart"></i> <a href="/admin/products" class="admin_products">Boliger</a></li>
+                    <li><i class="fas fa-users"></i> <a href="/admin/messages" class="admin_users">Beskeder</a></li>
+                    <li><i class="fas fa-user-tag"></i> <a href="/admin/oplysninger" class="admin_roles">Firmaoplysninger</a></li> 
+                    <li><i class="fas fa-tags"></i> <a href="/admin/openhours" class="admin_categories">Åbningstider</a></li>
+                    <li><i class="fas fa-file-alt"></i> <a href="/admin/nyheder" class="admin_categories">Nyheder</a></li>
+                        <li><a href="/logout">Log ud</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <!--MOBILE ASIDE-->
+        <aside class="admin_aside_navigation admin_aside_mobile">
+            <p>Hej <span class="admin_username"><%= (typeof showUsername != 'undefined' ) ? showUsername : ''  %></span></p>
+            <h1><a href="/">Webshops</a></h1>
+            <nav class="admin_nav_pc">
+                <ul>
+                    <li><a href="/admin" class="admin_home">Admin Panel</a></li>
+                    <li><a href="/admin/products" class="admin_products">Boliger</a></li>
+                    <li><a href="/admin/messages" class="admin_users">Beskeder</a></li>
+                    <li><a href="/admin/oplysninger" class="admin_roles">Firmaoplysninger</a></li> 
+                    <li><a href="/admin/openhours" class="admin_categories">Åbningstider</a></li>
+                    <li><a href="/admin/nyheder" class="admin_categories">Nyheder</a></li>
+                </ul>
+            </nav>
+        </aside>

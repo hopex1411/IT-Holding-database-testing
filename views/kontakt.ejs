@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+<div>
+  <h3>Kontaktoplysninger</h3>
+  <br>
+  <p><%= result.navn %></p>
+  <p><%= result.adresse %></p>
+  <p><%= result.postnr %> <%= result.city %></p>
+  <br>
+  <p>Telefon: <%= result.telefon %></p>
+  <p>Fax: <%= result.fax %></p>
+  <p>Email: <%= result.email %></p>
+  <br>
+  <h3>Åbningstider</h3>
+  <br>
+  <% results.forEach(result1 => { %>
+    <p><%= result1.day %> <%= result1.time %></p>
+<% }); %>
+</div>
+
+<div class="kontaktform forsidemain">
+        <form method="Post">
+        <label for="navn">Navn</label>
+          <input type="text" name="navn" required>
+          <br>
+
+          <label for="adresse">Address</label>
+          <input type="text" name="adresse" required>
+          <br>
+
+          <label for="telefon">Telefon</label>
+        <input type="text" name="telefon" >
+        <br>
+
+          <label for="email">Email</label>
+        <input type="text" name="email"  required>
+        <br>
+
+        <label for="kommentar">Komentar</label>
+        <input type="text"  name="kommentar" placeholder="Skriv din kommentar her.....">
+        <br>
+
+
+          <button type="submit" onclick="submitFunction()">submit</button>
+         
+        </form>
+    </div>
+    <script>
+      function submitFunction() {
+        alert("Din besked er blevet sendt!");
+      }
+      </script>
+<% include ./partials/sidemenu %>
+<% include ./partials/footer %>

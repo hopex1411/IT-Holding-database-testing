@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+<section id="single-product-section" class="wrapper">
+    <img class="productmainimage" src="/img/uploads/<%= result.image %>" alt="">
+    <div id="">
+    <h1><%= result.boligtitle %></h1>
+    <p style="width: 500px; text-align:justify;"><%= result.boligtext %></p>
+            <p><%= result.description %></p>
+            <p>Bolig &#x33A1: <%= result.price %></p>
+            <p>Grund &#x33A1: <%= result.grunareal %></p>
+            <br>
+            <p>Pris DKK: <%= result.pris %></p>
+            <p>Brutto: <%= result.brutto %></p>
+            <p>Netto: <%= result.netto %></p>    
+    </div>
+</section>
+<% include ./partials/sidemenu %>
+<% include ./partials/footer %>

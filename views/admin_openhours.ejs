@@ -1,0 +1,28 @@
+<% include ./partials/admin_header %>
+
+    <section class="admin_content">
+        <h1>Admin Panel | Åbningstider</h1>
+        
+        <table class="admin_read_data_table">
+            <thead>   
+                <tr>
+                    <th></th>
+                    <th>Dag</th>
+                    <th>Åbningstid</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(result => { %>
+                    <tr>  
+                        <td>
+                            <a class="admin_edit" href="/admin/editOpenhours/<%= result.id %>">Rediger</a>
+                        </td>
+                        <td><%= result.day %></td>
+                        <td><%= result.time %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </section>
+
+<% include ./partials/admin_footer %>

@@ -1,0 +1,33 @@
+<% include ./partials/admin_header %>
+
+    <section class="admin_content">
+        <h1>Admin Panel | Firmaoplysninger</h1>
+        <table class="admin_read_data_table">
+            <thead>   
+                <tr>
+                    <th></th>
+                    <th>Firmanavn</th>
+                    <th>Adresse</th>
+                    <th>Telefon</th>
+                    <th>Fax</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(result => { %>
+                    <tr>
+                        <td>
+                            <a class="admin_edit" href="/admin/editOplysninger/<%= result.id %>">Rediger</a>
+                        </td>
+                        <td><%= result.navn %></td>
+                        <td><%= result.adresse %> - <%= result.city %>, <%= result.postnr %></td>
+                        <td><%= result.telefon %></td>
+                        <td><%= result.fax %></td>
+                        <td><%= result.email %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </section>
+
+<% include ./partials/admin_footer %>

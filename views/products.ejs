@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+    <section id="products-section" class="wrapper">
+        <% results.forEach(result => { %>
+            <figure>
+                
+                <a href="/product/<%= result.id %>">
+                    <img class="productlistimage" src="/img/uploads/<%= result.image %>" alt="">
+                <div class="listwidth">
+                </a>
+                <h2><%= result.boligtitle %></h2>
+                    <p><%= result.boligtext %></p>
+                    <a id="righty" href="/product/<%- homeMainResult.id %>">Læs mere</a>
+            </div>
+            </figure>
+            <br>
+            <br>
+            <br>
+            <br>
+        <% }); %>
+    </section>
+
+<% include ./partials/sidemenu %>
+<% include ./partials/footer %>
