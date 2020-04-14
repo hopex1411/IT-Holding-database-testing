@@ -7,7 +7,7 @@ module.exports = function (app) {
         }
 
         const kontaktSQL =`SELECT *
-        FROM bolig
+        FROM computers
         ORDER BY rand()
         LIMIT 1`;
         

@@ -1,0 +1,131 @@
+<% include ./partials/admin_header %>
+
+    <section class="admin_content">
+        <h1>Admin Panel | Computers</h1>
+        <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+            <legend>Add PC</legend>
+            <fieldset>
+            <label for="brand">Brand: </label>
+            <input type="text" name="brand" id="brand" required>
+        </fieldset>
+        <fieldset>
+            <label for="model_number">Model Number: </label>
+            <input type="text" name="model_number" id="model_number" required>
+        </fieldset>
+        <fieldset>
+            <label for="pc_type">PC Type: </label>
+            <select name="pc_type">
+                <option value="Desktop">Desktop</option>
+                <option value="Laptop">Laptop</option>
+          </select>
+        </fieldset>
+        <fieldset>
+            <label for="ram">Ram/Memory: </label>
+            <select name="ram">
+                <option value="2GB DDR3">2GB DDR3</option>
+                <option value="2GB DDR3">2GB DDR3</option>
+                <option value="6GB DDR3">6GB DDR3</option>
+                <option value="8GB DDR3">8GB DDR3</option>
+                <option value="12GB DDR3">12GB DDR3</option>
+                <option value="16GB DDR3">16GB DDR3</option>
+                <option value="24GB DDR3">24GB DDR3</option>
+                <option value="32GB DDR3">32GB DDR3</option>
+                <option value="64GB DDR3">64GB DDR3</option>
+                <option value="2GB DDR4">2GB DDR4</option>
+                <option value="4GB DDR4">4GB DDR4</option>
+                <option value="6GB DDR4">6GB DDR4</option>
+                <option value="8GB DDR4">8GB DDR4</option>
+                <option value="12GB DDR4">12GB DDR4</option>
+                <option value="16GB DDR4">16GB DDR4</option>
+                <option value="24GB DDR4">24GB DDR4</option>
+                <option value="32GB DDR4">32GB DDR4</option>
+                <option value="64GB DDR4">64GB DDR4</option>
+          </select>
+        </fieldset>
+        <fieldset>
+            <label for="gpu">GPU: </label>
+            <input type="text" name="gpu" id="gpu" required>
+        </fieldset>
+        <fieldset>
+            <label for="cpu">CPU: </label>
+            <input type="text" name="cpu" id="cpu" required>
+        </fieldset>
+        <fieldset>
+            <label for="psu">PSU: </label>
+            <input type="text" name="psu" id="psu" required>
+        </fieldset>
+        <fieldset>
+            <label for="storage">Storage: </label>
+            <input type="text" name="storage" id="storage" required>
+        </fieldset>
+        <fieldset>
+            <label for="ports">Ports: </label>
+            <input type="text" name="ports" id="ports" required>
+        </fieldset>
+        <fieldset>
+            <label for="bluetooth">Bluetooth: </label>
+            <select name="bluetooth">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+          </select>
+        </fieldset>
+        <fieldset>
+            <label for="internet_connection">Internet Connection: </label>
+            <select name="internet_connection">
+                <option value="Wi-Fi">Wi-Fi</option>
+                <option value="Ethernet">Ethernet</option>
+                <option value="Wi-Fi + Ethernet">Wi-Fi + Ethernet</option>
+          </select>
+        </fieldset>
+        <fieldset>
+            <label for="operating_system">Operating System: </label>
+            <input type="text" name="operating_system" id="operating_system" required>
+        </fieldset>
+        <button type="submit">Add</button>
+        <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+        </form>
+
+        <table class="admin_read_data_table">
+            <thead>   
+                <tr>
+                    <th></th>
+                    <th>Brand</th>
+                    <th>Model Number</th>
+                    <th>PC Type</th>
+                    <th>Ram/Memory</th>
+                    <th>GPU</th>
+                    <th>CPU</th>
+                    <th>PSU</th>
+                    <th>Storage</th>
+                    <th>Ports</th>
+                    <th>Bluetooth</th>
+                    <th>Internet Connection</th>
+                    <th>Operating System</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(result => { %>
+                    <tr>
+                        <td>
+                            <a class="admin_edit" href="/editComputer/<%= result.id %>">Rediger</a>
+                            <a class="admin_delete" href="/deleteComputer/<%= result.id %>">Slet</a>
+                        </td>
+                        <td><%= result.brand %></td>
+                        <td><%= result.model_number %></td>
+                        <td><%= result.pc_type %></td>
+                        <td><%= result.ram %></td>
+                        <td><%= result.gpu %></td>
+                        <td><%= result.cpu %></td>
+                        <td><%= result.psu %></td>
+                        <td><%= result.storage %></td>
+                        <td><%= result.ports %></td>
+                        <td><%= result.bluetooth %></td>
+                        <td><%= result.internet_connection %></td>
+                        <td><%= result.operating_system %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </section>
+
+<% include ./partials/admin_footer %>
