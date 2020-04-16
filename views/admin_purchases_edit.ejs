@@ -1,0 +1,26 @@
+<% include ./partials/admin_header %>
+        <section class="admin_content">
+                <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+                    <legend>Edit Purchase:</legend>
+                    <label for="product_name">Product name: </label>
+                    <input type="text" name="product_name" id="product_name" value="<%= results.product_name %>" required>
+                </fieldset>
+                <fieldset>
+                    <label for="model_number">Model Number: </label>
+                    <input type="text" name="model_number" id="model_number" value="<%= results.model_number %>">
+                </fieldset>
+                <fieldset>
+                    <label for="product_link">Link: </label>
+                    <input type="text" name="product_link" id="product_link" value="<%= results.product_link %>">
+                </fieldset>
+                <fieldset>
+                    <label for="amount">Amount: </label>
+                    <input type="number" name="amount" id="amount" value="<%= results.amount %>" required>
+                </fieldset>
+                <button type="submit">Edit</button>
+                <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+                </form>
+                <p class="error_message"></p>
+        </section>
+
+<% include ./partials/admin_footer %>

@@ -1,0 +1,22 @@
+<% include ./partials/admin_header %>
+        <section class="admin_content">
+                <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+                    <legend>Edit Keyboard:</legend>
+                    <label for="brand">Brand: </label>
+                    <input type="text" name="brand" id="brand" value="<%= results.brand %>" required>
+                </fieldset>
+                <fieldset>
+                    <label for="model_number">Model Number: </label>
+                    <input type="text" name="model_number" id="model_number" value="<%= results.model_number %>">
+                </fieldset>
+                <fieldset>
+                    <label for="connections">Connection: </label>
+                    <input type="text" name="connections" id="connections" value="<%= results.connections %>" required>
+                </fieldset>
+                <button type="submit">Edit</button>
+                <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+                </form>
+                <p class="error_message"></p>
+        </section>
+
+<% include ./partials/admin_footer %>

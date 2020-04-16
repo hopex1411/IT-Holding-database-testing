@@ -1,0 +1,54 @@
+<% include ./partials/admin_header %>
+
+    <section class="admin_content">
+        <h1>Admin Panel | To be Purchased</h1>
+        <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+            <legend>Add purchase</legend>
+            <fieldset>
+            <label for="product_name">Product name: </label>
+            <input type="text" name="product_name" id="product_name" required>
+        </fieldset>
+        <fieldset>
+            <label for="model_number">Model Number: </label>
+            <input type="text" name="model_number" id="model_number" required>
+        </fieldset>
+        <fieldset>
+            <label for="product_link">Link: </label>
+            <input type="text" name="product_link" id="product_link" required>
+        </fieldset>
+        <fieldset>
+            <label for="amount">Amount: </label>
+            <input type="number" name="amount" id="amount" required>
+        </fieldset>
+        <button type="submit">Add</button>
+        <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+        </form>
+
+        <table class="admin_read_data_table">
+            <thead>   
+                <tr>
+                    <th></th>
+                    <th>Product name</th>
+                    <th>Model Number</th>
+                    <th>Link</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(result => { %>
+                    <tr>
+                        <td>
+                            <a class="admin_edit" href="/editPurchases/<%= result.id %>">Rediger</a>
+                            <a class="admin_delete" href="/deletePurchases/<%= result.id %>">Slet</a>
+                        </td>
+                        <td><%= result.product_name %></td>
+                        <td><%= result.model_number %></td>
+                        <td><a href="<%= result.product_link %>" target="_blank"><%= result.product_link %></a></td>
+                        <td><%= result.amount %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </section>
+
+<% include ./partials/admin_footer %></fieldset>

@@ -79,7 +79,7 @@ exports.editComputer = async function (req, res, next) {
             operating_system: req.fields.operating_system
         });
         const path = req.route.path.replace(':id', '');
-        res.redirect(path + req.params.id);
+        res.redirect('/computers');
     } catch (error) {
         console.error(error);
         res.send('FEJL!!!');

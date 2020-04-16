@@ -1,0 +1,73 @@
+<% include ./partials/admin_header %>
+        <section class="admin_content">
+                <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+                    <legend>Edit Cable:</legend>
+                    <fieldset>
+                        <label for="connection_type">Connection: </label>
+                        <select name="connection_type" value="<%= results.connection_type %>">
+                            <option value="HDMI">HDMI</option>
+                            <option value="HDMI-VGA">HDMI-VGA</option>
+                            <option value="VGA">VGA</option>
+                            <option value="VGA-DVI">VGA-DVI</option>
+                            <option value="DVI">DVI</option>
+                            <option value="DP">DP</option>
+                            <option value="DP-HDMI">DP-HDMI</option>
+                            <option value="MINI DP">MINI DP</option>
+                            <option value="MINI DP-DP">MINI DP-DP</option>
+                            <option value="MINI DP-HDMI">MINI DP-HDMI</option>
+                            <option value="USB C">USB C</option>
+                            <option value="USB C-DP">USB C-DP</option>
+                            <option value="USB C-HDMI">USB C-HDMI</option>
+                            <option value="Apple Thunderbolt">Apple Thunderbolt</option>
+                            <option value="Ethernet Cat 1">Ethernet Cat 1</option>
+                            <option value="Ethernet Cat 2">Ethernet Cat 2</option>
+                            <option value="Ethernet Cat 3">Ethernet Cat 3</option>
+                            <option value="Ethernet Cat 4">Ethernet Cat 4</option>
+                            <option value="Ethernet Cat 5">Ethernet Cat 5</option>
+                            <option value="Ethernet Cat 6">Ethernet Cat 6</option>
+                            <option value="Ethernet Cat 7">Ethernet Cat 7</option>
+                            <option value="Ethernet Cat 8">Ethernet Cat 8</option>
+                            <option value="Notebook Power Cable">Notebook Power Cable</option>
+                            <option value="Desktop Power Cable">Desktop Power Cable</option>
+                      </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="cable_length">Length:</label>
+                        <select name="cable_length" value="<%= results.cable_length %>">
+                            <option value="0.25 m">0.25 m</option>
+                            <option value="0.5 m">0.5 m</option>
+                            <option value="1 m">1 m</option>
+                            <option value="1.5 m">1.5 m</option>
+                            <option value="2 m">2 m</option>
+                            <option value="3 m">3 m</option>
+                            <option value="5 m">5 m</option>
+                            <option value="7 m">7 m</option>
+                            <option value="7.5 m">7.5 m</option>
+                            <option value="10 m">10 m</option>
+                            <option value="15 m">15 m</option>
+                            <option value="20 m">20 m</option>
+                      </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="model_number">Model Number: </label>
+                        <input type="text" name="model_number" id="model_number" value="<%= results.model_number %>" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="color">Color: </label>
+                        <select name="color" value="<%= results.color %>">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                            <option value="Grey">Grey</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                      </select>
+                    </fieldset>
+                <button type="submit">Edit</button>
+                <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+                </form>
+                <p class="error_message"></p>
+        </section>
+
+<% include ./partials/admin_footer %>

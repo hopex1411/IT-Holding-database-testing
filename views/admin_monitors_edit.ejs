@@ -1,0 +1,26 @@
+<% include ./partials/admin_header %>
+        <section class="admin_content">
+                <form method="POST" enctype="multipart/form-data" class="admin_form_create_update">
+                    <legend>Edit Monitor:</legend>
+                    <label for="brand">Brand: </label>
+                    <input type="text" name="brand" id="brand" value="<%= results.brand %>" required>
+                </fieldset>
+                <fieldset>
+                    <label for="size">Size: </label>
+                    <input type="text" name="size" id="size" value="<%= results.size %>">
+                </fieldset>
+                <fieldset>
+                    <label for="model_number">Model Number: </label>
+                    <input type="text" name="model_number" id="model_number" value="<%= results.model_number %>">
+                </fieldset>
+                <fieldset>
+                    <label for="ports">Ports: </label>
+                    <input type="text" name="ports" id="ports" value="<%= results.ports %>" required>
+                </fieldset>
+                <button type="submit">Edit</button>
+                <small class="error_message"><%= (typeof errorMessage != 'undefined') ? errorMessage : '' %></small>
+                </form>
+                <p class="error_message"></p>
+        </section>
+
+<% include ./partials/admin_footer %>
