@@ -12,7 +12,7 @@ DB_HOST=localhost
 DB_DATABASE=kitedanmark
 DB_PORT=3306
 ```
-- Du opretter en database med navnet "mobel", og køre SQL scriptet som kan findes [her](./sql/kitedanmark.sql)
+- Du opretter en database med navnet "kitedanmark", og køre SQL scriptet som kan findes [her](./sql/kitedanmark.sql)
 
 - Åbner terminalen og skriver ``` npm i ``` 
 
