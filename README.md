@@ -1,4 +1,4 @@
-# Eksamensopgave
+# Kitedanmark IT-Database
 
 For at starte det hele op kræver det følgende:
 
@@ -9,10 +9,10 @@ PORT=3000
 DB_USER=root
 DB_PASSWORD=
 DB_HOST=localhost
-DB_DATABASE=mobel
+DB_DATABASE=kitedanmark
 DB_PORT=3306
 ```
-- Du opretter en database med navnet "mobel", og køre SQL scriptet som kan findes [her](./sql/mobel.sql)
+- Du opretter en database med navnet "mobel", og køre SQL scriptet som kan findes [her](./sql/kitedanmark.sql)
 
 - Åbner terminalen og skriver ``` npm i ``` 
 
