@@ -84,8 +84,8 @@
                 <% results.forEach(result => { %>
                     <tr>
                         <td>
-                            <a class="admin_edit" href="/editCables/<%= result.id %>">Rediger</a>
-                            <a class="admin_delete" href="/deleteCables/<%= result.id %>">Slet</a>
+                            <a class="admin_edit" href="/editCables/<%= result.id %>">Edit</a>
+                            <a class="admin_delete" href="/deleteCables/<%= result.id %>">Delete</a>
                         </td>
                         <td><%= result.connection_type %></td>
                         <td><%= result.cable_length %></td>

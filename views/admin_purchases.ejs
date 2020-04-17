@@ -38,8 +38,8 @@
                 <% results.forEach(result => { %>
                     <tr>
                         <td>
-                            <a class="admin_edit" href="/editPurchases/<%= result.id %>">Rediger</a>
-                            <a class="admin_delete" href="/deletePurchases/<%= result.id %>">Slet</a>
+                            <a class="admin_edit" href="/editPurchases/<%= result.id %>">Edit</a>
+                            <a class="admin_delete" href="/deletePurchases/<%= result.id %>">Delete</a>
                         </td>
                         <td><%= result.product_name %></td>
                         <td><%= result.model_number %></td>
