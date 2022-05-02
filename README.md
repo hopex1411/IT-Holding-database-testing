@@ -1,8 +1,8 @@
 # IT-holding databasetesting
 
-For at starte det hele op kræver det følgende:
+For this project to work, you need the following:
 
-- En ".env" fil som indeholder 
+- A ".env" file containing 
 ```
 PORT=3000
 
@@ -12,10 +12,10 @@ DB_HOST=localhost
 DB_DATABASE=testdatabase
 DB_PORT=3306
 ```
-- Du opretter en database med navnet "kitedanmark", og køre SQL scriptet som kan findes [her](./sql/kitedanmark.sql)
+- To create a databse called "testdatabase", and run the SQL script which can be found [here](./sql/kitedanmark.sql)
 
-- Åbner terminalen og skriver ``` npm i ``` 
+- Open the terminal and type ``` npm i ``` 
 
-# Start hjemmesiden
+# Start the webpage
 
-Når alting er sat op, så er ikke mere end at skrive ``` npm run dev eller node index ``` og åbne din browser på [localhost:3000](http://localhost:3000)
+When everything is up and running, all thats left to write in the terminal is ``` npm run dev or node index ``` ,open your browser on [localhost:3000](http://localhost:3000)
