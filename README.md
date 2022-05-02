@@ -12,7 +12,7 @@ DB_HOST=localhost
 DB_DATABASE=testdatabase
 DB_PORT=3306
 ```
-- To create a databse called "testdatabase", and run the SQL script which can be found [here](./sql/kitedanmark.sql)
+- To create a databse called "testdatabase", and run the SQL script which can be found [here](./sql/testdatabase.sql)
 
 - Open the terminal and type ``` npm i ``` 
 
