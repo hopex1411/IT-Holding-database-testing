@@ -1,4 +1,4 @@
-# Kitedanmark IT-Database
+# IT-holding databasetesting
 
 For at starte det hele op kræver det følgende:
 
@@ -9,7 +9,7 @@ PORT=3000
 DB_USER=root
 DB_PASSWORD=
 DB_HOST=localhost
-DB_DATABASE=kitedanmark
+DB_DATABASE=testdatabase
 DB_PORT=3306
 ```
 - Du opretter en database med navnet "kitedanmark", og køre SQL scriptet som kan findes [her](./sql/kitedanmark.sql)
